@@ -24,13 +24,17 @@ body {
     justify-content: center;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .contact-info > p {
     background-color: var(--section-bg-color);
     border-bottom: 3px solid transparent;
     font-weight: bold;
     padding: 0.5em;
     border-radius: 0;
-    cursor: pointer;
     transition: 
         border-bottom-color 0.3s ease, 
         transform 0.3s ease;
