@@ -25,10 +25,10 @@ fadeElements.forEach(element => {
 })
 
 // Export button fading
-const exportButton = document.querySelector('.export-button')
-exportButton.addEventListener('mouseover', () => {
-    exportButton.classList.add('highlight')
-})
-exportButton.addEventListener('mouseout', () => {
-    exportButton.classList.remove('highlight')
-})
+// const exportButton = document.querySelector('.export-button')
+// exportButton.addEventListener('mouseover', () => {
+//     exportButton.classList.add('highlight')
+// })
+// exportButton.addEventListener('mouseout', () => {
+//     exportButton.classList.remove('highlight')
+// })

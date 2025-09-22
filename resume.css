@@ -1,5 +1,19 @@
+@font-face {
+    font-family: Raleway;
+    src: url('fonts/Raleway-VariableFont_wght.woff2') format('woff2');
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: RobotoMono;
+    src: url('fonts/RobotoMono-VariableFont_wght.woff2') format('woff2');
+}
+
 :root {
     --section-bg-color: #F2F0EF;
+    --hero-bg-color: #0c0c0c;
+    --hero-text-color: #FFFFFF;
     --secondary-color: #00FF7F;
     --lang-skills-color: #4FC3F7;
     --frontend-skills-color: #81C784;
@@ -15,6 +29,48 @@ body {
     max-width: 900px;
     padding: 0 5%;
     text-align: center;
+}
+
+.raleway-font-light > h1 {
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: 300;
+}
+
+.roboto-mono-font > h1 {
+    font-family: 'RobotoMono', monospace, Arial, sans-serif;
+}   
+
+.hero-section {
+    background-color: var(--hero-bg-color);
+    color: var(--hero-text-color);
+    position: relative;
+    width: 100vw;
+    height: 720px;
+    left: 50%;
+    margin-left: -50vw;
+    letter-spacing: 0.18em;
+    font-size: 2rem;
+}
+
+.hero-section > h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.hero-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8vw;
+}
+
+.hero-flex > div:first-child {
+    text-align: right;
+}
+
+.hero-flex > div:last-child {
+    text-align: left;
 }
 
 .contact-info {
@@ -63,7 +119,7 @@ a:active {
 h2 {
     margin-top: 1.5em;
     margin-bottom: 0;
-}
+} 
 
 /* For use with Intersection Observer*/
 .section {
@@ -152,10 +208,6 @@ h2 {
 
     body {
         font-size: 0.95rem;
-    }
-
-    .section {
-        /* text-align: left; */
     }
 
     .contact-info {
