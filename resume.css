@@ -1,3 +1,4 @@
+/*#region General Css Rules */
 @font-face {
     font-family: Raleway;
     src: url('fonts/Raleway-VariableFont_wght.woff2') format('woff2');
@@ -11,10 +12,10 @@
 }
 
 :root {
-    --section-bg-color: #F2F0EF;
+    --section-bg-color: #2c2c2e;
     --hero-bg-color: #0c0c0c;
     --hero-text-color: #FFFFFF;
-    --secondary-color: #00FF7F;
+    --secondary-color: #1F72AE;
     --lang-skills-color: #4FC3F7;
     --frontend-skills-color: #81C784;
     --backend-skills-color: #BA68C8;
@@ -25,10 +26,21 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0em auto;
+    background-color: #1e1e1e;
+    color: #fff;
+    /* margin: 0em auto;
     max-width: 900px;
-    padding: 0 5%;
+    padding: 0 5%; */
+    margin: 0;
+    padding: 0;
     text-align: center;
+    overflow-x: hidden;
+}
+
+.section-clamp {
+    max-width: 900px;
+    margin: 0em auto;
+    padding: 0 5%;
 }
 
 .raleway-font-light > h1 {
@@ -38,16 +50,19 @@ body {
 
 .roboto-mono-font > h1 {
     font-family: 'RobotoMono', monospace, Arial, sans-serif;
-}   
+}
+/*#endregion********************/  
 
+/*#region Hero Section */
 .hero-section {
     background-color: var(--hero-bg-color);
     color: var(--hero-text-color);
     position: relative;
-    width: 100vw;
+    /* width: 100vw;
     height: 720px;
     left: 50%;
-    margin-left: -50vw;
+    margin-left: -50vw; */
+    height: 670px;
     letter-spacing: 0.18em;
     font-size: 2rem;
 }
@@ -72,6 +87,22 @@ body {
 .hero-flex > div:last-child {
     text-align: left;
 }
+/*#endregion ***************/
+
+/*#region Sticky Header */
+.sticky {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    background-color: #36454F;
+    width: 100vw;
+    left: 50%;
+    margin-left: -50vw;
+    height: 50px;
+    z-index: 9999;
+}
+
+/*#endregion */
 
 .contact-info {
     display: flex;
@@ -141,7 +172,7 @@ h2 {
 
 /* Card style for each section */
 .section > div {
-    background-color: #F2F0EF;
+    background-color: var(--section-bg-color);
     padding: 0 1em;
     /*border-radius: 8px;*/
     border-top-right-radius: 8px;
