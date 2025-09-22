@@ -175,7 +175,6 @@ h2 {
     margin: 0em auto;
     padding: 0 5%;
 }
-/*#endregion***********************************/
 
 /* Card style for each section */
 .section > div {
@@ -196,6 +195,7 @@ h2 {
 .job-title {
     margin-top: 0px;
 }
+/*#endregion***********************************/
 
 /*#region Skill Chips */
 .chip-set {
