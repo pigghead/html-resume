@@ -1,4 +1,10 @@
 /*#region General Css Rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: Raleway;
     src: url('fonts/Raleway-VariableFont_wght.woff2') format('woff2');
@@ -34,14 +40,21 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    overflow-x: hidden;
 }
 
-.section-clamp {
-    max-width: 900px;
-    margin: 0em auto;
-    padding: 0 5%;
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
 }
+
+h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0;
+} 
 
 .raleway-font-light > h1 {
     font-family: 'Raleway', Arial, sans-serif;
@@ -104,20 +117,12 @@ body {
 
 /*#endregion */
 
+/*#region Contact Info */
 .contact-info {
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
     justify-content: center;
-}
-
-a,
-a:link,
-a:visited,
-a:hover,
-a:active {
-    text-decoration: none;
-    color: inherit;
 }
 
 .contact-info > p {
@@ -147,13 +152,9 @@ a:active {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
+/*#endregion */
 
-h2 {
-    margin-top: 1.5em;
-    margin-bottom: 0;
-} 
-
-/* For use with Intersection Observer*/
+/*#region Section */
 .section {
     text-align: justify;
     display: flex;
@@ -168,13 +169,18 @@ h2 {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
-/************************************/
+
+.section-clamp {
+    max-width: 66%;
+    margin: 0em auto;
+    padding: 0 5%;
+}
+/*#endregion***********************************/
 
 /* Card style for each section */
 .section > div {
     background-color: var(--section-bg-color);
     padding: 0 1em;
-    /*border-radius: 8px;*/
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     border-left: 5px solid var(--secondary-color);
@@ -191,7 +197,7 @@ h2 {
     margin-top: 0px;
 }
 
-/* Chip style for skills */
+/*#region Skill Chips */
 .chip-set {
     display: flex;
     flex-wrap: wrap;
@@ -211,6 +217,7 @@ h2 {
 .backend span { background-color: var(--backend-skills-color); }
 .tools span { background-color: var(--tools-skills-color); }
 .other span { background-color: var(--other-skills-color); }
+/*#endregion */
 
 .export-button {
     background-color: var(--section-bg-color);
@@ -229,6 +236,7 @@ h2 {
     border-bottom-color: var(--secondary-color);
 }
 
+/* Mobile */
 @media(max-width: 600px) {
     h1.name {
         font-size: 1.6rem;
@@ -241,6 +249,44 @@ h2 {
     body {
         font-size: 0.95rem;
     }
+
+    /*#region Hero */
+    .hero-section {
+        height: 100vh;
+        min-height: 500px;
+        font-size: 1.5rem;
+    }
+
+    .hero-section > h2 {
+        padding: 0;
+        margin: 0;
+    }
+
+    .hero-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .hero-flex > div:first-child,
+    .hero-flex > div:last-child {
+        text-align: center;
+    }
+    /*#endregion */
+
+    /*#region Section */
+    .section {
+        text-align: left;
+    }
+
+    .section-clamp {
+        max-width: 100%;
+        margin: 0em auto;
+        padding: 0 10px;
+    }
+    /*#endregion */
 
     .contact-info {
         flex-direction: column;
