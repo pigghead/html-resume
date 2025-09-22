@@ -95,6 +95,7 @@ a:active {
     font-weight: bold;
     padding: 0.5em;
     border-radius: 0;
+    cursor: pointer;
     transition: 
         border-bottom-color 0.3s ease, 
         transform 0.3s ease;
