@@ -13,14 +13,8 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v4
 
-    - name: Upload to azure blob
-      uses: azure/cli@v2
-      with:
-        azcliversion: 2.30.0
-        inlinescript: |
-          az storage blob upload-batch \
-          --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} \
-          --account-key ${{ secrets.AZURE_STORAGE_KEY }} \
-          --destination '$web' \
-          --source .
+    - name: Upload to azure blob with azcopy
+      run: |
+          azcopy sync "./" "https://${{ secrets.AZURE_STORAGE_ACCOUNT }}.blob.core.windows.net/\$web${{ secrets.AZURE_SAS_TOKEN }}" \
+          --recursive
           
