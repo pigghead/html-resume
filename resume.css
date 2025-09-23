@@ -59,6 +59,10 @@ a:active {
     font-family: 'RobotoMono', monospace, Arial, sans-serif;
 }
 
+.-thin {
+    font-weight: 100;
+}
+
 .-light {
     font-weight: 300;
 }
@@ -143,6 +147,25 @@ a:active {
     margin-left: -50vw;
     height: 50px;
     z-index: 9999;
+}
+
+.nav-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2em;
+}
+
+.logo {
+    font-size: 1.2rem;
+    letter-spacing: 0.16em;
+    cursor: pointer;
+}
+
+.logo > a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /*#endregion */
@@ -261,12 +284,12 @@ a:active {
     min-height: 80px;
 }
 
-.footer > i {
+.footer > a {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.footer > i:hover {
+.footer > a:hover {
     transform: scale(1.1);
 }
 /*#endregion */
