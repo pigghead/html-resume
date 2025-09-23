@@ -16,11 +16,14 @@
 @font-face {
     font-family: RobotoMono;
     src: url('fonts/RobotoMono-VariableFont_wght.woff2') format('woff2');
+    font-weight: 100 900;
+    font-display: swap;
 }
 
 :root {
     --section-bg-color: #2c2c2e;
     --hero-bg-color: #0c0c0c;
+    --black-accent: #000;
     --hero-text-color: #FFFFFF;
     --secondary-color: #1F72AE;
     --lang-skills-color: #4FC3F7;
@@ -52,18 +55,29 @@ a:active {
     color: inherit;
 }
 
-h2 {
+/* h2 {
     margin-top: 1.5em;
     margin-bottom: 0;
-} 
+}  */
 
-.raleway-font-light > h1 {
+.raleway-font {
     font-family: 'Raleway', Arial, sans-serif;
+}
+
+.roboto-mono-font {
+    font-family: 'RobotoMono', monospace, Arial, sans-serif;
+}
+
+.-light {
     font-weight: 300;
 }
 
-.roboto-mono-font > h1 {
-    font-family: 'RobotoMono', monospace, Arial, sans-serif;
+.-semi-bold {
+    font-weight: 600;
+}
+
+.-bold {
+    font-weight: 900;
 }
 /*#endregion*******************/  
 
@@ -75,7 +89,6 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* position: relative; */
     height: 670px;
     letter-spacing: 0.18em;
     font-size: 2rem;
@@ -121,7 +134,8 @@ h2 {
     border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
-    font-weight: bold;
+    letter-spacing: 0.32em;
+    font-weight: semi-bold;
     padding: 0.5em 1em;
     width: 25vw
 }
@@ -196,8 +210,8 @@ h2 {
 }
 
 .section-clamp {
-    max-width: 66%;
-    margin: 0em auto;
+    max-width: 80%;
+    margin: 0 auto 3em auto;
     padding: 0 5%;
 }
 
@@ -242,6 +256,28 @@ h2 {
 .backend span { background-color: var(--backend-skills-color); }
 .tools span { background-color: var(--tools-skills-color); }
 .other span { background-color: var(--other-skills-color); }
+/*#endregion */
+
+/*#region Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1em 0;
+    background-color: var(--black-accent);
+    min-height: 80px;
+}
+
+.footer > i {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer > i:hover {
+    transform: scale(1.1);
+}
 /*#endregion */
 
 .export-button {
