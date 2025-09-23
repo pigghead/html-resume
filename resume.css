@@ -38,9 +38,6 @@ body {
     line-height: 1.6;
     background-color: #1e1e1e;
     color: #fff;
-    /* margin: 0em auto;
-    max-width: 900px;
-    padding: 0 5%; */
     margin: 0;
     padding: 0;
     text-align: center;
@@ -51,14 +48,8 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-    text-decoration: none;
     color: inherit;
 }
-
-/* h2 {
-    margin-top: 1.5em;
-    margin-bottom: 0;
-}  */
 
 .raleway-font {
     font-family: 'Raleway', Arial, sans-serif;
@@ -139,7 +130,7 @@ a:active {
     padding: 0.5em 1em;
     width: 25vw
 }
-/*#endregion ***************/
+/*#endregion */
 
 /*#region Sticky Header */
 .sticky {
