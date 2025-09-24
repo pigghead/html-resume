@@ -3,7 +3,7 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    /* outline: 1px solid red;  */
+    /* outline: 1px solid red; */
 }
 
 @font-face {
@@ -167,8 +167,9 @@ a:active {
     text-decoration: none;
     color: inherit;
 }
+/*#endregion */
 
-/* Css hamburger */
+/*#region Css hamburger */
 .line {
     width: 40px;
     height: 2px;
@@ -207,7 +208,47 @@ a:active {
 .hamburger:hover {
     cursor: pointer;
 }
+/*#endregion */
 
+/*#region Collapsible Nav menu */
+.side-wrapper {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    height: calc(100vh - 50px);
+    width: 450px;
+    background-color: var(--black-accent);
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 9998;
+}
+
+.side-wrapper.active {
+    transform: translateX(0);
+}
+
+.side-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.side-content a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;;
+    letter-spacing: 0.36em;
+    padding: 0.5em 0;
+    margin-left: auto;
+    margin-bottom: 1.5em;
+    border-bottom: 5px solid transparent;
+    transition: border-bottom-color 0.3s ease;
+}
+
+.side-content a:hover {
+    border-bottom-color: var(--secondary-color);
+}
 /*#endregion */
 
 /*#region Contact Info */
@@ -333,23 +374,6 @@ a:active {
     transform: scale(1.1);
 }
 /*#endregion */
-
-.export-button {
-    background-color: var(--section-bg-color);
-    border-bottom: 3px solid transparent;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0.5em 1em;
-    transition: border-bottom-color 0.3s ease;
-    max-width: 23%;
-    margin: 1em auto;
-}
-
-.export-button.highlight {
-    border-bottom-color: var(--secondary-color);
-}
 
 /* Mobile */
 @media(max-width: 600px) {
