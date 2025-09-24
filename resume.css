@@ -168,6 +168,46 @@ a:active {
     color: inherit;
 }
 
+/* Css hamburger */
+.line {
+    width: 40px;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    margin: 8px auto;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+#hamburger {
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* #hamburger.active {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+} */
+
+#hamburger.active .line:nth-child(1) {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+#hamburger.active .line:nth-child(3) {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
 /*#endregion */
 
 /*#region Contact Info */
