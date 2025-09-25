@@ -1,0 +1,14 @@
+<div class="carousel">
+    <fa-icon [icon]="faChevronLeft" (click)="previousSlide()" class="nav" [class.disabled]="currentIndex === 0"></fa-icon>
+
+    <div class="content">
+        <div
+            class="project-card-wrapper"
+            *ngFor="let item of items; let i = index"
+            [ngClass]="getSlideClass(i)">
+            <app-project-card [project]="item"></app-project-card>
+        </div>
+    </div>
+
+    <fa-icon [icon]="faChevronRight" (click)="nextSlide()" class="nav" [class.disabled]="currentIndex === items.length - 1"></fa-icon>
+</div>

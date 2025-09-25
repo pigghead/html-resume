@@ -1,0 +1,90 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 670px;
+    gap: 1rem;
+
+    .content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 1000px;
+
+        .project-card-wrapper {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+            opacity: 0;
+            z-index: 0;
+
+            &.active {
+                transform: translateX(-50%) scale(1) rotateY(0deg);
+                opacity: 1;
+                z-index: 4;
+            }
+
+            &.prev {
+                transform: translateX(-110%) scale(0.85) rotateY(10deg);
+                opacity: 0.85;
+                z-index: 3;
+            }
+
+            &.prev-2 {
+                transform: translateX(-160%) scale(0.6) rotateY(20deg);
+                opacity: 0.3;
+                z-index: 2;
+            }
+
+            &.next {
+                transform: translateX(10%) scale(0.85) rotateY(-10deg);
+                opacity: 0.85;
+                z-index: 3;
+            }
+
+            &.next-2 {
+                transform: translateX(60%) scale(0.6) rotateY(-20deg);
+                opacity: 0.3;
+                z-index: 2;
+            }
+
+            &.hidden-left {
+                transform: translateX(-210%) scale(0.45) rotateY(30deg);
+                opacity: 0;
+                pointer-events: none;
+                z-index: 1;
+            }
+
+            &.hidden-right {
+                transform: translateX(110%) scale(0.45) rotateY(-30deg);
+                opacity: 0;
+                pointer-events: none;
+                z-index: 1;
+            }
+
+            &.hidden {
+                opacity: 0;
+                pointer-events: none;
+                z-index: 1;
+            }
+        }
+    }
+
+    .nav {
+        cursor: pointer;
+        padding: 0.5rem;
+        font-size: 2rem;
+        color: #888;
+    }
+
+    .nav:hover {
+        color: #555;
+    }
+
+    .nav.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+}

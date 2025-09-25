@@ -1,0 +1,28 @@
+// _colors.scss
+
+$main-palette: (
+    "primary": #1e1e1e,
+    "secondary": #0c0c0c,
+    "accent": #1F72AE,
+    "text": #FFFFFF
+);
+
+$skills-palette: (
+    "lang-skills": #4FC3F7,
+    "frontend-skills": #81C784,
+    "backend-skills": #BA68C8,
+    "tools-skills": #FFB74D,
+    "other-skills": #B0BEC5
+);
+
+:export {
+    primary: map-get($main-palette, "primary");
+    secondary: map-get($main-palette, "secondary");
+    accent: map-get($main-palette, "accent");
+    text: map-get($main-palette, "text");
+    lang-skills: map-get($skills-palette, "lang-skills");
+    frontend-skills: map-get($skills-palette, "frontend-skills");
+    backend-skills: map-get($skills-palette, "backend-skills");
+    tools-skills: map-get($skills-palette, "tools-skills");
+    other-skills: map-get($skills-palette, "other-skills");
+}

@@ -1,0 +1,32 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1em 0;
+    background-color: #000;
+    min-height: 80px;
+
+    .icon-holder {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        gap: 1rem;
+
+        fa-icon {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            -webkit-transition: transform 0.3s ease-in-out;
+            -o-transition: transform 0.3s ease-in-out;
+        }
+
+        fa-icon:hover {
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -o-transform: scale(1.1);
+        }
+    }
+}
