@@ -9,9 +9,9 @@
     </div>
     <div class="side-wrapper" [ngClass]="{'is-active': isMenuOpen}">
         <div class="side-content roboto-mono-font">
-            <a routerLink="/" (click)="closeMenu()">Home</a>
-            <a routerLink="/about" (click)="closeMenu()">About</a>
-            <a routerLink="/projects" (click)="closeMenu()">Projects</a>
+            <a routerLink="/" (click)="closeMenu(); scrollTo('home')">Home</a>
+            <a (click)="closeMenu(); scrollTo('about')">About</a>
+            <a (click)="closeMenu(); scrollTo('projects')">Projects</a>
             <a routerLink="/contact" (click)="closeMenu()">Contact</a>
         </div>
     </div>

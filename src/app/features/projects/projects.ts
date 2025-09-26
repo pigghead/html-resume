@@ -20,31 +20,31 @@ export class ProjectsComponent {
     {
       id: 2, 
       name: "Business Scraper", 
-      image: "...", 
+      image: "images/540x900_a.png", 
       description: "This is a description"
     },
     {
       id: 3,
       name: "To do App",
-      image: "...",
+      image: "images/540x900.png",
       description: "This is a description"
     },
     {
       id: 4,
       name: "Ecommerce Application",
-      image: "...",
+      image: "images/540x900_a.png",
       description: "This is a description"
     },
     {
       id: 5,
       name: "Application Name",
-      image: "...",
+      image: "images/540x900.png",
       description: "This is a description"
     },
     {
       id: 6,
       name: "Application Name",
-      image: "...",
+      image: "images/540x900_a.png",
       description: "This is a description"
     }
   ]

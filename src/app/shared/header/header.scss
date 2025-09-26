@@ -1,6 +1,6 @@
 .sticky {
     position: -webkit-sticky; /* For Safari */
-    position: sticky;
+    position: fixed;
     top: 0;
     background-color: #000;
     width: 100vw;
@@ -93,6 +93,7 @@
         }
         a:hover {
             border-bottom-color: var(--color-accent);
+            cursor: pointer;
         }
     }
 }
