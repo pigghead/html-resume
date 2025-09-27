@@ -1,0 +1,21 @@
+.contact-page-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    height: calc(100vh - 0px);
+    width: 80vw;
+    margin: 0 auto;
+
+    > * {
+        flex: 1 1 40%;
+        max-width: 45%;
+    }
+
+    .info {
+        text-align: left;
+        max-width: 20vw;
+    }
+}
