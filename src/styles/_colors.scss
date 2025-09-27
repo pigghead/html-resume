@@ -4,7 +4,7 @@ $main-palette: (
     "primary": #1e1e1e,
     "secondary": #0c0c0c,
     "accent": #1F72AE,
-    "text": #FFFFFF
+    "text": #F4F4F9
 );
 
 $skills-palette: (
@@ -13,6 +13,14 @@ $skills-palette: (
     "backend-skills": #BA68C8,
     "tools-skills": #FFB74D,
     "other-skills": #B0BEC5
+);
+
+$brainstorm-palette: (
+    "french-gray": #d1d5de,
+    "snow": #fffbfe,
+    "alabaster": #eef0eb,
+    "anti-flash-white": #f0f3f5,
+    "ghost-white": #f4f4f9
 );
 
 :export {

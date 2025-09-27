@@ -20,8 +20,9 @@ export class ProjectsComponent {
     {
       id: 2, 
       name: "Business Scraper", 
+      subtitle: "Full-Stack Application",
       image: "images/540x900_a.png", 
-      description: "This is a description"
+      description: "Retrieve desired business information from custom draw .KML files."
     },
     {
       id: 3,

@@ -1,7 +1,7 @@
 .project-card {
     width: 28vw;
     height: 80vh;
-    background: #FFF;
+    background: #f4f4f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
@@ -14,26 +14,31 @@
     }
 
     .content {
+        display: flex;
+        flex-direction: column;
+        height: calc(100% - 300px);
         padding: 20px;
         text-align: left;
 
         .title {
             font-size: 1.5em;
             margin-top: 0;
-            margin-bottom: 5px;
-            color: #333;
+            margin-bottom: 0px;
+            color: #000;
         }
 
         .subtitle {
             font-size: 0.875em;
-            color: #777;
-            margin-bottom: 15px;
+            color: #555;
+            margin-bottom: 5px;
         }
 
         .description {
+            flex-grow: 1;
             font-size: 1em;
             line-height: 1.5;
-            color: #555;
+            color: #000;
+            opacity: 0.8;
             margin-bottom: 20px;
         }
 
@@ -42,6 +47,7 @@
             color: #007bff;
             text-decoration: none;
             font-size: 1em;
+            margin-top: auto;
 
             :hover {
                 text-decoration: underline;
