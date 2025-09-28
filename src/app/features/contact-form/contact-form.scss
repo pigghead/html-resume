@@ -6,5 +6,44 @@
     background-color: #F4F4F9;
     border-radius: 8px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2em;
+
+    > * {
+        color: #1c1c1e
+    }
+
+    .entry-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        
+        .row-1 {
+            display: flex;
+            flex-direction: row;
+            gap: 1em;
+
+            :first-child,
+            :last-child {
+                flex: 0 0 calc(50% - 0.5em);
+                min-width: 0;
+            }
+        }
+
+        .row-2 > input {
+            width: 100%;
+        }
+
+        .row-3 > textarea {
+            height: 8rem;
+            width: 100%;
+            padding: 1em;
+            resize: none;
+        }
+    }
+
+    .form-entry {
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3)
+    }
 }
