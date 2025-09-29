@@ -53,5 +53,6 @@ export class Carousel {
 
   onLearnMore(project: any) {
     this.learnMore.emit(project);
+    //console.log("propogating learnMore; item: ", project);
   }
 }

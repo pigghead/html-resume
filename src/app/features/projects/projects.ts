@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common'
 import { Carousel } from '../carousel/carousel';  
 import { Modal } from '../../shared/modal/modal';
 
 @Component({
   selector: 'app-projects',
-  imports: [Carousel, Modal],
+  imports: [CommonModule, Carousel, Modal],
+  standalone: true,
   templateUrl: './projects.html',
   styleUrl: './projects.scss'
 })
@@ -56,9 +58,11 @@ export class ProjectsComponent {
 
   openModal(project: any) {
     this.selectedProject = project;
+    document.body.classList.add('modal-open');
   }
 
   closeModal() {
     this.selectedProject = null;
+    document.body.classList.remove('modal-open');
   }
 }

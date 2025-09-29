@@ -72,6 +72,10 @@ body {
     flex-direction: column;
 }
 
+.modal-open {
+    overflow-y: hidden;
+}
+
 .main {
     flex: 1;
 }
