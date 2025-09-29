@@ -1,0 +1,24 @@
+.modal-wrapper {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+
+    .left-container {
+        flex: 1;
+
+        .skills {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+    }
+
+    .right-container {
+        flex: 2;
+
+        > h2 {
+            text-transform: uppercase;
+        }
+    }
+}

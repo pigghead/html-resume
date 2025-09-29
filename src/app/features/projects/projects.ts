@@ -1,15 +1,17 @@
 import { Component, Input } from '@angular/core';
 import { Carousel } from '../carousel/carousel';  
+import { Modal } from '../../shared/modal/modal';
 
 @Component({
   selector: 'app-projects',
-  imports: [Carousel],
+  imports: [Carousel, Modal],
   templateUrl: './projects.html',
   styleUrl: './projects.scss'
 })
 
 export class ProjectsComponent {
-  Projects = [
+  Projects = 
+  [
     {
       id: 1, 
       name: "Spray Bot", 
@@ -49,4 +51,14 @@ export class ProjectsComponent {
       description: "This is a description"
     }
   ]
+
+  selectedProject?: any = null;
+
+  openModal(project: any) {
+    this.selectedProject = project;
+  }
+
+  closeModal() {
+    this.selectedProject = null;
+  }
 }

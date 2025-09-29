@@ -1,0 +1,16 @@
+<div class="modal-wrapper">
+    <div class="modal-container">
+        <div class="left-container">
+            <!-- Image carousel, description changes alongside -->
+             <div class="skills">
+                <span class="modal-skill-chip" @ngFor="let skill of project.skills">
+                    {{ skill }}
+                </span>
+             </div>
+        </div>
+        <div class="right-container">
+            <h2>{{ project.name }}</h2>
+            <p>{{ project.subtitle }}</p>
+        </div>
+    </div>
+</div>

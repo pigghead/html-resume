@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectCardComponent } from '../project-card/project-card';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -15,6 +15,7 @@ export class Carousel {
   faChevronRight = faChevronRight;
 
   @Input() items: any[] = [];
+  @Output() learnMore = new EventEmitter<any>();
 
   currentIndex: number = 0;
 
@@ -48,5 +49,9 @@ export class Carousel {
     if (index > this.currentIndex + 1) return 'hidden-right';
 
     return 'hidden';
+  }
+
+  onLearnMore(project: any) {
+    this.learnMore.emit(project);
   }
 }

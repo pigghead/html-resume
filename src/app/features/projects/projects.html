@@ -1,3 +1,12 @@
 <div class=".carousel-wrapper">
-    <app-carousel [items]="Projects"></app-carousel>
+    <app-carousel 
+        [items]="Projects"
+        (learnMore)="openModal($event)">
+    </app-carousel>
 </div>
+
+<app-modal
+    *ngIf="selectedProject"
+    [project]="selectedProject"
+    (close)="closeModal()">
+</app-modal>

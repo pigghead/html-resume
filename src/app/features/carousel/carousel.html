@@ -6,7 +6,10 @@
             class="project-card-wrapper"
             *ngFor="let item of items; let i = index"
             [ngClass]="getSlideClass(i)">
-            <app-project-card [project]="item"></app-project-card>
+            <app-project-card 
+                [project]="item"
+                (learnMore)="onLearnMore($event)">
+            </app-project-card>
         </div>
     </div>
 

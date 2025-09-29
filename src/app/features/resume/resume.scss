@@ -65,5 +65,25 @@
                 margin: 0;
             }
         }
+
+        .skill-topic {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem; 
+            font-weight: bold;
+
+            > span {
+                border-radius: 8px;
+                padding: 0.25rem;
+            }
+            
+            &.lang-skills > span { background-color: var(--lang-skills-color); }
+            &.frontend-skills > span { background-color: var(--frontend-skills-color); }
+            &.backend-skills > span { background-color: var(--backend-skills-color); }
+            &.tools-skills > span { background-color: var(--tools-skills-color); }
+            &.other-skills > span { background-color: var(--other-skills-color); }
+        }
     }
 }
