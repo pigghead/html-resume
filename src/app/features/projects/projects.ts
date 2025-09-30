@@ -19,7 +19,7 @@ export class ProjectsComponent {
       name: "Portfolio",
       subtitle: "Frontend Development",
       date: "September 2025",
-      image: "images/540x900.png",
+      image: "images/portfolio/48x48.svg",
       modalImages: ["images/portfolio/HOME.png", "images/portfolio/Project Cards 1.png", "images/portfolio/Project Cards 2.png",
                     "images/portfolio/Topic Chips.png"
       ],
@@ -31,7 +31,8 @@ export class ProjectsComponent {
                 {name:"Cloudflare",category:"other-skills"},
                 {name:"Azure",category:"backend-skills"},
                 {name:"Github Actions",category:"tools-skills"}
-      ]
+      ],
+      githubLink: ""
     },
     {
       id: 1, 
@@ -49,7 +50,8 @@ export class ProjectsComponent {
       skills: [
                 {name:"Python", category:"lang-skills"},
                 {name:"APIs", category:"backend-skills"}
-      ]
+      ],
+      githubLink: "https://github.com/pigghead/spray-bot"
     },
     {
       id: 2, 
@@ -89,14 +91,15 @@ export class ProjectsComponent {
                 {name:"React",category:"frontend-skills"}, 
                 {name:"Nodejs",category:"backend-skills"}, 
                 {name:"Javascript",category:"lang-skills"}
-              ]
+              ],
+      githubLink: "https://github.com/pigghead/todo-app"
     },
     {
       id: 4,
       name: "Ecommerce Application",
       subtitle: "Full-Stack Application", 
       date: "April 2025",
-      image: "images/540x900_a.png",
+      image: "images/ecommerce/ecommerce-app.png",
       modalImages: ["images/250x140_a.png","images/250x140_b.png","images/250x140_c.png"],
       description: "Study on Jeffrey Palermo's onion architecture.",
       extendedDesc: "",
@@ -127,23 +130,24 @@ export class ProjectsComponent {
       name: "Github API Query",
       subtitle: "Full-Stack Application",
       date: "November 2021", 
-      image: "images/540x900_a.png",
-      modalImages: ["images/250x140_a.png","images/250x140_b.png","images/250x140_c.png"],
+      image: "images/api-query/ss1.png",
+      modalImages: ["images/api-query/ss1.png","images/api-query/ss2.png"],
       description: "Queries against the github api to find user information.",
       extendedDesc: "",
       skills: [
                 {name:"HTML",category:"lang-skills"}, 
                 {name:"Javascript",category:"lang-skills"}, 
                 {name:"APIs",category:"backend-skills"}
-              ]
+              ],
+      githubLink: "https://github.com/pigghead/Github-API-Query"
     },
     {
       id: 7,
       name: "Image compression",
       subtitle: "ML Image Compression",
       date: "May 2021",
-      image: "images/540x900.png",
-      modalImages: ["images/250x140_a.png","images/250x140_b.png","images/250x140_c.png"],
+      image: "images/image-down-scaler/image-downscaler.png",
+      modalImages: ["images/image-down-scaler/ids-2.png","images/image-down-scaler/ids-1.png","images/image-down-scaler/ids-3.png"],
       description: "Downscales a submitted image to 80x60.",
       extendedDesc: "",
       skills: [

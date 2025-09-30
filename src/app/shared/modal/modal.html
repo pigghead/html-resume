@@ -11,6 +11,9 @@
                     {{ skill.name }}
                 </span>
              </div>
+             <a class="link raleway-font" [href]="project.githubLink" [class.disable]="!project.githubLink">
+                <fa-icon [icon]="faGithub" size="xl"></fa-icon>
+             </a>
         </div>
         <div class="right-container">
             <h2 class="roboto-mono-font">{{ project.name }}</h2>
