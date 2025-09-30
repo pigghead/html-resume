@@ -15,6 +15,22 @@ export class ProjectsComponent {
   Projects = 
   [
     {
+      id: 0,
+      name: "Portfolio",
+      subtitle: "Frontend Development",
+      date: "September 2025",
+      image: "images/540x900.png",
+      description: "Showcase of various projects & professional experience",
+      extendedDesc: "",
+      skills: [
+                {name:"Typescript",category:"lang-skills"},
+                {name:"Angular",category:"frontend-skills"},
+                {name:"Cloudflare",category:"other-skills"},
+                {name:"Azure",category:"backend-skills"},
+                {name:"Github Actions",category:"tools-skills"}
+      ]
+    },
+    {
       id: 1, 
       name: "Spray Bot", 
       subtitle: "Python Development",
@@ -73,10 +89,13 @@ export class ProjectsComponent {
       id: 4,
       name: "Ecommerce Application",
       subtitle: "Full-Stack Application", 
-      date: "",
+      date: "April 2025",
       image: "images/540x900_a.png",
-      description: "This is a description",
-      extendedDesc: "This is my extended description"
+      description: "Study on Jeffrey Palermo's onion architecture.",
+      extendedDesc: "",
+      skills: [
+                {name:"C#",category:"lang-skills"}
+      ]
     },
     {
       id: 5,
@@ -108,6 +127,18 @@ export class ProjectsComponent {
                 {name:"Javascript",category:"lang-skills"}, 
                 {name:"APIs",category:"backend-skills"}
               ]
+    },
+    {
+      id: 7,
+      name: "Image compression",
+      subtitle: "ML Image Compression",
+      date: "May 2021",
+      image: "images/540x900.png",
+      description: "Downscales a submitted image to 80x60.",
+      extendedDesc: "",
+      skills: [
+                {name:"Python",category:"lang-skills"}
+      ]
     }
   ]
 
