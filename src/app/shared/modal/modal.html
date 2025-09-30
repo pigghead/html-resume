@@ -1,16 +1,22 @@
 <div class="modal-wrapper" (click)="onClose()">
     <div class="modal-container" (click)="$event.stopPropagation()">
         <div class="left-container">
+            <p>{{ project.date }}</p>
             <!-- Image carousel, description changes alongside -->
              <div class="skills">
-                <span class="modal-skill-chip" *ngFor="">
-                    skill
+                <span 
+                class="modal-skill-chip" 
+                [ngClass]="skill.category"
+                *ngFor="let skill of project.skills">
+                    {{ skill.name }}
                 </span>
              </div>
         </div>
         <div class="right-container">
-            <h2>{{ project.name }}</h2>
-            <p>subtitle</p>
+            <h2 class="roboto-mono-font">{{ project.name }}</h2>
+            <p class="subtitle raleway-font">{{ project.subtitle }}</p>
+            <p class="raleway-font">{{ project.description }}</p>
+            <p class="raleway-font">{{ project.extendedDesc }}</p>
         </div>
     </div>
 </div>
