@@ -20,6 +20,9 @@ export class ProjectsComponent {
       subtitle: "Frontend Development",
       date: "September 2025",
       image: "images/540x900.png",
+      modalImages: ["images/portfolio/HOME.png", "images/portfolio/Project Cards 1.png", "images/portfolio/Project Cards 2.png",
+                    "images/portfolio/Topic Chips.png"
+      ],
       description: "Showcase of various projects & professional experience",
       extendedDesc: "",
       skills: [
@@ -35,7 +38,8 @@ export class ProjectsComponent {
       name: "Spray Bot", 
       subtitle: "Python Development",
       date: "May 2024", 
-      image: "images/spraybot.png", 
+      image: "images/spraybot.png",
+      modalImages: ["images/250x140_a.png","images/250x140_b.png","images/250x140_c.png"], 
       description: "Discord bot created in Discord.py to use with peers.",
       extendedDesc: "Using Discord.py, implemented a bot to be used in discord servers with various functions. \
                     Firstly, there is a slash command that allows a user to target another user, in which \
@@ -53,6 +57,7 @@ export class ProjectsComponent {
       subtitle: "Full-Stack Application",
       date: "February 2024",
       image: "images/540x900_a.png", 
+      modalImages: ["images/scraper/results.png","images/scraper/kml_test.png"],
       description: "Retrieve desired business information from custom draw .KML files.",
       extendedDesc: "Users upload a .KML file, known as a shapefile, which contains the coordinates for the \
                     vertices of a custom made shape. This program subdivides this larger shape by inserting radii \
@@ -74,6 +79,7 @@ export class ProjectsComponent {
       subtitle: "Full-Stack Application", 
       date: "",
       image: "images/540x900.png",
+      modalImages: ["images/250x140_a.png","images/250x140_b.png","images/250x140_c.png"],
       description: "An application that tracks user submitted tasks",
       extendedDesc: "This full-stack application tracks tasks submitted by users and allows everyone to view \
                     one another's tasks. Made in the classical MERN stack.",
@@ -91,6 +97,7 @@ export class ProjectsComponent {
       subtitle: "Full-Stack Application", 
       date: "April 2025",
       image: "images/540x900_a.png",
+      modalImages: ["images/250x140_a.png","images/250x140_b.png","images/250x140_c.png"],
       description: "Study on Jeffrey Palermo's onion architecture.",
       extendedDesc: "",
       skills: [
@@ -103,6 +110,7 @@ export class ProjectsComponent {
       subtitle: "Full-Stack Application", 
       date: "October 2023",
       image: "images/540x900.png",
+      modalImages: ["images/250x140_a.png","images/250x140_b.png","images/250x140_c.png"],
       description: "Users explore a webpage of movies and leave reviews.",
       extendedDesc: "Created a simple html, css, javascript webpage. Explored accessing the Movie Databse api. \
                     Deployed a database on MongoDb to collect reviews about a movie, including a user's name \
@@ -120,6 +128,7 @@ export class ProjectsComponent {
       subtitle: "Full-Stack Application",
       date: "November 2021", 
       image: "images/540x900_a.png",
+      modalImages: ["images/250x140_a.png","images/250x140_b.png","images/250x140_c.png"],
       description: "Queries against the github api to find user information.",
       extendedDesc: "",
       skills: [
@@ -134,6 +143,7 @@ export class ProjectsComponent {
       subtitle: "ML Image Compression",
       date: "May 2021",
       image: "images/540x900.png",
+      modalImages: ["images/250x140_a.png","images/250x140_b.png","images/250x140_c.png"],
       description: "Downscales a submitted image to 80x60.",
       extendedDesc: "",
       skills: [

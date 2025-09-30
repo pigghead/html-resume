@@ -1,0 +1,31 @@
+.carousel-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+
+    img {
+        border-radius: 8px;
+        max-width: 250px;
+        max-height: 140px;
+        object-fit: cover;
+    }
+}
+
+.nav {
+    cursor: pointer;
+    color: #555;
+    transition: opacity 0.3s ease-in;
+}
+
+.nav:hover {
+    opacity: 0.8;
+}
+
+.nav.disabled {
+    color: #888;
+    opacity: 0.5;
+    cursor: default;
+}

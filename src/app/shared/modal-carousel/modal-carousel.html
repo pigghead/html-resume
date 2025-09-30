@@ -1,1 +1,5 @@
-<p>modal-carousel works!</p>
+<div class="carousel-container">
+    <fa-icon [icon]="faChevronCircleLeft" class="nav" (click)="prevSlide()" [class.disabled]="currentIndex===0"></fa-icon>
+    <img [src]="modalImages?.[currentIndex]" alt="image">
+    <fa-icon [icon]="faChevronCircleRight" class="nav" (click)="nextSlide()" [class.disabled]="currentIndex===modalImages.length-1"></fa-icon>
+</div>

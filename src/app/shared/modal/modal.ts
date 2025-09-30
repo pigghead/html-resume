@@ -1,10 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ModalCarousel } from '../modal-carousel/modal-carousel';
 
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ModalCarousel],
   templateUrl: './modal.html',
   styleUrl: './modal.scss'
 })
@@ -13,7 +14,7 @@ export class Modal {
   @Output() close = new EventEmitter<void>();
 
   onClose() {
-    console.log("sending a close emit to parent")
+    //console.log("sending a close emit to parent")
     this.close.emit();
   }
 }

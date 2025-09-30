@@ -1,8 +1,8 @@
 <div class="modal-wrapper" (click)="onClose()">
     <div class="modal-container" (click)="$event.stopPropagation()">
         <div class="left-container">
+            <app-modal-carousel [modalImages]="project.modalImages"></app-modal-carousel>
             <p>{{ project.date }}</p>
-            <!-- Image carousel, description changes alongside -->
              <div class="skills">
                 <span 
                 class="modal-skill-chip" 
