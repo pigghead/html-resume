@@ -97,7 +97,8 @@
         "extendedDesc": "",
         "skills": [
             {"name": "C#", "category": "lang-skills"}
-        ]
+        ],
+        "githubLink":"https://github.com/pigghead/Ecommerce"
     },
     {
         "id": 5,
@@ -154,6 +155,24 @@
         "extendedDesc": "",
         "skills": [
             {"name": "Python", "category": "lang-skills"}
+        ],
+        "githubLink":"https://gist.github.com/pigghead/ece7aea9b51b799fbb17b5f1e7c1521b"
+    },
+    {
+        "id": 8,
+        "name": "Tic-Tac-Toe",
+        "subtitle": "Cpp GUI Game",
+        "date": "October 2020",
+        "image" :"images/540x900.png",
+        "modalImages": [
+            "images/250x140_d.png",
+            "images/250x140_e.png"
+        ],
+        "description": "Using SDL2 to create Tic-Tac-Toe",
+        "extendedDesc": "",
+        "skills": [
+            {"name":"C++", "category":"lang-skills"},
+            {"name":"SDL2", "category":"lang-skills"}
         ]
     }
 ]
