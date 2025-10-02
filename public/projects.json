@@ -107,9 +107,9 @@
         "date": "October 2023",
         "image": "images/540x900.png",
         "modalImages": [
-            "images/250x140_a.png",
-            "images/250x140_b.png",
-            "images/250x140_c.png"
+            "images/movie-page/main-page_35.png",
+            "images/movie-page/search-result_35.png",
+            "images/movie-page/mongo-collection.png"
         ],
         "description": "Users explore a webpage of movies and leave reviews.",
         "extendedDesc": "Created a simple html, css, javascript webpage. Explored accessing the Movie Databse api. Deployed a database on MongoDb to collect reviews about a movie, including a user's name and the content of their review. CRUD testing was done using Postman.",
