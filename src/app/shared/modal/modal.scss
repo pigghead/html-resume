@@ -46,8 +46,9 @@
 
             @each $category, $color in colors.$skills-palette {
                 .modal-skill-chip.#{$category} {
-                    background-color: $color;
-                    color: #fff;
+                    border: 2px solid $color;
+                    color: #0c0c0c;
+                    font-weight: bold;
                 }
             }
         }

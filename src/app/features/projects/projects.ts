@@ -66,8 +66,9 @@ export class ProjectsComponent {
                     throughout the large shape, then drawing circles to ensure the area is completely covered with \
                     minimal overlap from the circles. The coordinates of the these radii plus the diameter of each \
                     circle is then used as parameters for the Google Places API, and business information is \
-                    retrieved in steps. This information is presented in a .CSV format to users, and users can \
-                    select or omit which information to include.",
+                    retrieved in steps. This information is presented in a .csv-like format to users, and users can \
+                    select or omit which information to include. After filtering desired information, users can \
+                    download this information to a .csv.",
       skills: [
                 {name:"Python", category:"lang-skills"}, 
                 {name:"APIs", category:"backend-skills"}, 
@@ -123,7 +124,8 @@ export class ProjectsComponent {
                 {name:"CSS",category:"lang-skills"}, 
                 {name:"Javascript",category:"lang-skills"}, 
                 {name:"MongoDb",category:"backend-skills"}
-      ]
+      ],
+      githubLink: "https://github.com/pigghead/movie-page"
     },
     {
       id: 6,

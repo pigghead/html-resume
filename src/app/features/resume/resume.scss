@@ -76,14 +76,29 @@
 
             > span {
                 border-radius: 8px;
-                padding: 0.25rem;
+                padding: 0.25rem 0.75rem;
             }
             
-            &.lang-skills > span { background-color: var(--lang-skills-color); }
-            &.frontend-skills > span { background-color: var(--frontend-skills-color); }
-            &.backend-skills > span { background-color: var(--backend-skills-color); }
-            &.tools-skills > span { background-color: var(--tools-skills-color); }
-            &.other-skills > span { background-color: var(--other-skills-color); }
+            &.lang-skills > span { 
+                // background-color: var(--lang-skills-color); 
+                border: 2px solid var(--lang-skills-color);
+            }
+            &.frontend-skills > span { 
+                // background-color: var(--frontend-skills-color); 
+                border: 2px solid var(--frontend-skills-color);
+            }
+            &.backend-skills > span { 
+                // background-color: var(--backend-skills-color); 
+                border: 2px solid var(--backend-skills-color);
+            }
+            &.tools-skills > span { 
+                // background-color: var(--tools-skills-color); 
+                border: 2px solid var(--tools-skills-color);
+            }
+            &.other-skills > span { 
+                // background-color: var(--other-skills-color);
+                border: 2px solid var(--other-skills-color);
+            }
         }
     }
 }
