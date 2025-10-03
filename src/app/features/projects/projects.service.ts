@@ -23,7 +23,6 @@ export interface Project {
 export class ProjectsService {
     private cache: Project[] | null = null;
     constructor(private http: HttpClient) {};
-    //Projects: Project[] = []
 
     getProjects(forceReload = false): Observable<Project[]> {
         if(this.cache && !forceReload) {
