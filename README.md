@@ -108,7 +108,7 @@ export class ProjectsService {
 - Cloudflare Cdn
     - Manages Dns & routing
     - Provides caching, Ssl, and Cdn acceleration
-    - Site accessible from: [justin-armstrong.com](justin-armstrong.com) by pointing the domain
+    - Site accessible from: [justin-armstrong.com](https://www.justin-armstrong.com) by pointing the domain
         to the Azure blob storage
 
 ## Current State
