@@ -30,7 +30,8 @@
               "src/styles/styles.scss"
             ],
             "server": "src/main.server.ts",
-            "outputMode": "server",
+            "outputMode": "static",
+            "outputPath": "dist/html-resume",
             "ssr": {
               "entry": "src/server.ts"
             }
