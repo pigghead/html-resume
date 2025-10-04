@@ -1,0 +1,32 @@
+name: build ng and deploy to azure
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v4
+
+    - name: setup nodejs
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20.17
+        cache: 'npm'
+        cache-dependency-path: package-lock.json
+
+    - name: install dependencies
+      run: npm ci
+
+    - name: build ng browser project
+      run: npm run build
+
+    - name: push dist/html-resume to Azure
+      run: |
+          azcopy sync "dist/html-resume/browser" "https://${{ secrets.AZURE_STORAGE_ACCOUNT }}.blob.core.windows.net/\$web${{ secrets.AZURE_SAS_TOKEN }}" \
+          --recursive
