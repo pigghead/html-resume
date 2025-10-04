@@ -37,7 +37,9 @@
         "extendedDesc": "Using Discord.py, implemented a bot to be used in discord servers with various functions. Firstly, there is a slash command that allows a user to target another user, in which Spray bot will send a custom message, tagging the targeted user. The second function allows a user to initiate a slash command that causes the bot to join an active Discord call, play an audio, and leave the call afterwards.",
         "skills": [
             {"name": "Python", "category": "lang-skills"},
-            {"name": "APIs", "category": "backend-skills"}
+            {"name": "Discord.py", "category":"lang-skills"},
+            {"name": "APIs", "category": "backend-skills"},
+            {"name": "FFmpeg","category":"other-skills"}
         ],
         "githubLink": "https://github.com/pigghead/spray-bot"
     },
