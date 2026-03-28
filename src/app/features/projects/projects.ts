@@ -7,7 +7,7 @@ import { Modal } from '../../shared/modal/modal';
 
 interface Skill {name: string; category: string;}
 export interface Project {
-  id: number;
+  id?: number;
   name: string;
   subtitle?: string;
   date?: string;

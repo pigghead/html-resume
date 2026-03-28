@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DatePipe } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { ModalCarousel } from '../modal-carousel/modal-carousel';
@@ -7,7 +8,7 @@ import { ModalCarousel } from '../modal-carousel/modal-carousel';
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, ModalCarousel],
+  imports: [CommonModule, FontAwesomeModule, ModalCarousel, DatePipe],
   templateUrl: './modal.html',
   styleUrl: './modal.scss'
 })

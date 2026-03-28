@@ -2,7 +2,7 @@
     <div class="modal-container" (click)="$event.stopPropagation()">
         <div class="left-container">
             <app-modal-carousel [modalImages]="project.modalImages"></app-modal-carousel>
-            <p>{{ project.date }}</p>
+            <p>{{ project.date | date:'MMM. yyyy' }}</p>
              <div class="skills">
                 <span 
                 class="modal-skill-chip roboto-mono-font" 

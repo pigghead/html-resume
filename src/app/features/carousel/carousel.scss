@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 670px;
+    height: 800px;
     gap: 1rem;
     overflow: hidden;
 
@@ -12,6 +12,7 @@
         justify-content: center;
         align-items: center;
         perspective: 1000px;
+        padding-top: 1rem;
         
 
         .project-card-wrapper {

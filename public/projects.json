@@ -1,9 +1,8 @@
 [
     {
-        "id": 0,
         "name": "Portfolio",
         "subtitle": "Frontend Development",
-        "date": "September 2025",
+        "date": "2025-09",
         "image": "images/portfolio/48x48.svg",
         "modalImages": [
             "images/portfolio/HOME.png",
@@ -12,7 +11,7 @@
             "images/portfolio/Topic Chips.png"
         ],
         "description": "Showcase of various projects & professional experience",
-        "extendedDesc": "",
+        "extendedDesc": "Personal portfolio built with Angular and deployed via a CI/CD pipeline using GitHub Actions, Azure blob storage, and Cloudflare for DNS and CDN acceleration. Features dynamic project cards, image carousels, and modal overlays all driven by a structured JSON data model.",
         "skills": [
             {"name": "Typescript", "category": "lang-skills"},
             {"name": "Angular", "category": "frontend-skills"},
@@ -23,17 +22,16 @@
         "githubLink": "https://github.com/pigghead/html-resume"
     },
     {
-        "id": 1,
         "name": "Spray Bot",
         "subtitle": "Python Development",
-        "date": "May 2024",
+        "date": "2024-05",
         "image": "images/spraybot.png",
         "modalImages": [
             "images/250x140_a.png",
             "images/250x140_b.png",
             "images/250x140_c.png"
         ],
-        "description": "Discord bot created in Discord.py to use with peers.",
+        "description": "Discord bot created in Discord.py to use with peers",
         "extendedDesc": "Using Discord.py, implemented a bot to be used in discord servers with various functions. Firstly, there is a slash command that allows a user to target another user, in which Spray bot will send a custom message, tagging the targeted user. The second function allows a user to initiate a slash command that causes the bot to join an active Discord call, play an audio, and leave the call afterwards.",
         "skills": [
             {"name": "Python", "category": "lang-skills"},
@@ -44,37 +42,38 @@
         "githubLink": "https://github.com/pigghead/spray-bot"
     },
     {
-        "id": 2,
         "name": "Business Scraper",
         "subtitle": "Full-Stack Application",
-        "date": "February 2024",
+        "date": "2026-03",
         "image": "images/540x900_a.png",
         "modalImages": [
             "images/scraper/results.png",
             "images/scraper/kml_test.png"
         ],
-        "description": "Retrieve desired business information from custom draw .KML files.",
-        "extendedDesc": "Users upload a .KML file, known as a shapefile, which contains the coordinates for the vertices of a custom made shape. This program subdivides this larger shape by inserting radii throughout the large shape, then drawing circles to ensure the area is completely covered with minimal overlap from the circles. The coordinates of the these radii plus the diameter of each circle is then used as parameters for the Google Places API, and business information is retrieved in steps. This information is presented in a .csv-like format to users, and users can select or omit which information to include. After filtering desired information, users can download this information to a .csv.",
+        "description": "Full-stack geospatial business intelligence tool that scrapes and enriches business data within a user-defined geographic boundary",
+        "extendedDesc": "Users upload a KML file defining a custom geographic polygon, the same format used by Google Earth and Geographic Information System (GIS) tools. The backend parses the polygon coordinates, subdivides the bounding area into a grid of cells to work around per-request result limits, and queries the Nominatim OpenStreetMap API across each cell using an expanded taxonomy of business category terms. Each discovered business is then enriched with additional detail (phone, website, hours, and address) via a secondary call to the Nominatim details endpoint. Results are deduplicated across cells and terms, filtered to only those whose coordinates fall inside the original polygon using a point-in-polygon test, and cached in Redis with a 24-hour TTL to avoid redundant scraping of overlapping areas. The frontend presents results in a filterable table where users can toggle which fields to include before exporting a curated CSV.",
         "skills": [
             {"name": "Python", "category": "lang-skills"},
-            {"name": "APIs", "category": "backend-skills"},
+            {"name": "FastAPI", "category": "backend-skills"},
             {"name": "React", "category": "frontend-skills"},
-            {"name": "C#/.NET", "category": "lang-skills"}
+            {"name": "Redis", "category": "backend-skills"},
+            {"name": "Celery", "category": "backend-skills"},
+            {"name": "Docker", "category": "backend-skills"},
+            {"name": "PostgreSQL", "category": "backend-skills"}
         ]
     },
     {
-        "id": 3,
         "name": "To do App",
         "subtitle": "Full-Stack Application",
-        "date": "",
+        "date": "2023-12",
         "image": "images/540x900.png",
         "modalImages": [
             "images/250x140_a.png",
             "images/250x140_b.png",
             "images/250x140_c.png"
         ],
-        "description": "An application that tracks user submitted tasks",
-        "extendedDesc": "This full-stack application tracks tasks submitted by users and allows everyone to view one another's tasks. Made in the classical MERN stack.",
+        "description": "Collaborative MERN stack task tracker where all users share a common board",
+        "extendedDesc": "Built on the MERN stack (MongoDB, Express.js, React, Node.js), this full-stack app allows users to submit and view tasks on a shared board. Demonstrates end-to-end data flow from a React frontend through an Express REST API to a MongoDB collection.",
         "skills": [
             {"name": "MongoDb", "category": "backend-skills"},
             {"name": "Express.js", "category": "backend-skills"},
@@ -85,36 +84,34 @@
         "githubLink": "https://github.com/pigghead/todo-app"
     },
     {
-        "id": 4,
         "name": "Ecommerce Application",
         "subtitle": "Full-Stack Application",
-        "date": "April 2025",
+        "date": "2025-04",
         "image": "images/ecommerce/ecommerce-app.png",
         "modalImages": [
             "images/250x140_a.png",
             "images/250x140_b.png",
             "images/250x140_c.png"
         ],
-        "description": "Study on Jeffrey Palermo's onion architecture.",
-        "extendedDesc": "",
+        "description": "C# ecommerce application built around Jeffrey Palermo's Onion Architecture pattern",
+        "extendedDesc": "Implemented a layered ecommerce application in C# using the Onion Architecture pattern, which emphasizes separation of concerns by organizing code around the domain model rather than infrastructure. Explored how dependency inversion and interface-driven design keep the core business logic independent of external frameworks and databases.",
         "skills": [
             {"name": "C#", "category": "lang-skills"}
         ],
         "githubLink":"https://github.com/pigghead/Ecommerce"
     },
     {
-        "id": 5,
         "name": "Movie Review App",
         "subtitle": "Full-Stack Application",
-        "date": "October 2023",
+        "date": "2023-10",
         "image": "images/540x900.png",
         "modalImages": [
             "images/movie-page/main-page_35.png",
             "images/movie-page/search-result_35.png",
             "images/movie-page/mongo-collection.png"
         ],
-        "description": "Users explore a webpage of movies and leave reviews.",
-        "extendedDesc": "Created a simple html, css, javascript webpage. Explored accessing the Movie Databse api. Deployed a database on MongoDb to collect reviews about a movie, including a user's name and the content of their review. CRUD testing was done using Postman.",
+        "description": "HTML/JS web app integrating the TMDB API with a MongoDB backend for storing user movie reviews",
+        "extendedDesc": "Built a vanilla HTML, CSS, and JavaScript frontend that queries the Movie Database (TMDB) API to browse films. Integrated a MongoDB database to persist user-submitted reviews, including reviewer name and review content. REST endpoints were designed and tested using Postman.",
         "skills": [
             {"name": "HTML", "category": "lang-skills"},
             {"name": "CSS", "category": "lang-skills"},
@@ -124,17 +121,16 @@
         "githubLink": "https://github.com/pigghead/movie-page"
     },
     {
-        "id": 6,
         "name": "Github API Query",
         "subtitle": "Full-Stack Application",
-        "date": "November 2021",
+        "date": "2021-11",
         "image": "images/api-query/ss1.png",
         "modalImages": [
             "images/api-query/ss1.png",
             "images/api-query/ss2.png"
         ],
-        "description": "Queries against the github api to find user information.",
-        "extendedDesc": "",
+        "description": "Vanilla JS app that queries the GitHub REST API to surface public user profile and repository data",
+        "extendedDesc": "A lightweight JavaScript frontend that accepts a GitHub username and fetches public profile data and repository listings via the GitHub REST API, displaying results dynamically without a page reload.",
         "skills": [
             {"name": "HTML", "category": "lang-skills"},
             {"name": "Javascript", "category": "lang-skills"},
@@ -143,35 +139,33 @@
         "githubLink": "https://github.com/pigghead/Github-API-Query"
     },
     {
-        "id": 7,
         "name": "Image compression",
         "subtitle": "ML Image Compression",
-        "date": "May 2021",
+        "date": "2021-05",
         "image": "images/image-down-scaler/image-downscaler.png",
         "modalImages": [
             "images/image-down-scaler/ids-2.png",
             "images/image-down-scaler/ids-1.png",
             "images/image-down-scaler/ids-3.png"
         ],
-        "description": "Downscales a submitted image to 80x60.",
-        "extendedDesc": "",
+        "description": "Python script that downscales images to 80x60 using ML-based compression techniques",
+        "extendedDesc": "A Python-based image downscaler that reduces submitted images to an 80x60 resolution. Explores pixel manipulation and compression tradeoffs, applying techniques informed by machine learning approaches to lossy image reduction.",
         "skills": [
             {"name": "Python", "category": "lang-skills"}
         ],
         "githubLink":"https://gist.github.com/pigghead/ece7aea9b51b799fbb17b5f1e7c1521b"
     },
     {
-        "id": 8,
         "name": "Tic-Tac-Toe",
         "subtitle": "Cpp GUI Game",
-        "date": "October 2020",
+        "date": "2020-10",
         "image" :"images/540x900.png",
         "modalImages": [
             "images/250x140_d.png",
             "images/250x140_e.png"
         ],
-        "description": "Using SDL2 to create Tic-Tac-Toe",
-        "extendedDesc": "",
+        "description": "C++ Tic-Tac-Toe game with a graphical interface built using the SDL2 library",
+        "extendedDesc": "Implemented a fully playable two-player Tic-Tac-Toe game in C++ using SDL2 for rendering the game board and handling mouse input. Focused on game loop architecture, event-driven input handling, and 2D graphics rendering fundamentals.",
         "skills": [
             {"name":"C++", "category":"lang-skills"},
             {"name":"SDL2", "category":"lang-skills"}

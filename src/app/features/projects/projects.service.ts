@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, httpResource } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { tap } from 'rxjs';
+import { map, tap } from 'rxjs';
 
 export interface Skill {name: string; category: string;}
 export interface Project {
@@ -30,6 +30,11 @@ export class ProjectsService {
         }
 
         return this.http.get<Project[]>('/projects.json').pipe(
+            map(data => data.sort((a, b) =>
+                new Date(b.date ?? '').getTime() - new Date(a.date ?? '').getTime()
+            ).map((project, index) => ({...project, id: index, date: project.date ? project.date + '-01' : undefined})
+
+            )),
             tap(data => this.cache = data)
         );
     }
