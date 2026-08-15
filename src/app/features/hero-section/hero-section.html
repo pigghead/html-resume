@@ -2,12 +2,25 @@
     <div class="hero-content">
         <div class="hero-flex">
             <div class="roboto-mono-font">
-                <h1>Justin</h1>
-                <h1>Armstrong</h1>
+                <h3>Hello, I'm</h3>
+                <h1>
+                    Justin
+                    <span>Armstrong</span>
+                </h1>
+                <p>I design intuitive experiences and build scalable solutions for the web.</p>
             </div>
             <div class="raleway-font">
-                <h1 class="-light">designer</h1>
-                <h1 class="-light">developer</h1>
+                <div class="designer-content">
+                    <fa-icon [icon]="faCode" />
+                    <h2>Designer</h2>
+                    <p>Crafting clean, meaningful interfaces</p>
+                </div>
+
+                <div class="developer-content">
+                    <fa-icon [icon]="faFeatherPointed" />
+                    <h2>Developer</h2>
+                    <p>building scalable and reliable apps</p>
+                </div>
             </div>
         </div>
         <button class="hero-button roboto-mono-font -semi-bold" (click)="scrollTo('projects')">See Projects</button>

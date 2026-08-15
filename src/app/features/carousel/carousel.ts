@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Project } from '../projects/projects';
 import { ProjectCardComponent } from '../project-card/project-card';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -14,7 +15,7 @@ export class Carousel {
   faChevronLeft = faChevronLeft;
   faChevronRight = faChevronRight;
 
-  @Input() items: any[] = [];
+  @Input() items: Project[] = [];
   @Output() learnMore = new EventEmitter<any>();
 
   currentIndex: number = 0;
@@ -51,7 +52,7 @@ export class Carousel {
     return 'hidden';
   }
 
-  onLearnMore(project: any) {
+  onLearnMore(project: Project) {
     this.learnMore.emit(project);
     //console.log("propogating learnMore; item: ", project);
   }
