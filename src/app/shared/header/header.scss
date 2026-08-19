@@ -1,27 +1,36 @@
 .sticky {
     position: -webkit-sticky; /* For Safari */
     position: fixed;
-    top: 0;
-    background-color: #000;
+
     width: 100vw;
-    left: 50%;
-    margin-left: -50vw;
     height: 80px;
+
+    top: 0;
+    left: 50%;
+
+    background-color: #000;
+
+    margin-left: -50vw;
+
     z-index: 9998;
 }
 
 .nav-bar {
-    height: 100%;
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+
+    height: 100%;
+
     margin: 0 2em;
 }
 
 .logo {
     font-size: 1.2em;
     letter-spacing: 0.16em;
-    cursor: poiinter;
+
+    cursor: pointer;
 
     a {
         text-decoration: none;
@@ -31,6 +40,7 @@
 
 #hamburger {
     position: relative;
+
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -38,11 +48,13 @@
 
 #hamburger.is-active .line:nth-child(1) {
     transform: translateX(100%);
+
     opacity: 0;
 }
 
 #hamburger.is-active .line:nth-child(3) {
     transform: translateX(-100%);
+
     opacity: 0;
 }
 
@@ -51,11 +63,15 @@
 }
 
 .line {
+    display: block;
+
     width: 40px;
     height: 2px;
+
     background-color: var(--color-text);
-    display: block;
+
     margin: 8px auto;
+
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -63,36 +79,50 @@
 
 .side-wrapper {
     position: fixed;
+
     top: 50px;
     right: 0;
-    height: calc(100vh - 50px);
+
+    height: calc(100svh - 80px);
+    max-width: 400px;
     width: 30vw;
+
     background-color: #000;
+
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+
     transform: translateX(100%);
     transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+
     z-index: 9999;
 
     .side-content {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+
         padding: 1em;
+
         a {
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
+
             letter-spacing: 0.36em;
+
             padding: 0.5em 0;
             margin-left: auto;
             margin-bottom: 1.5em;
+
             border-bottom: 5px solid transparent;
+
             transition: border-bottom 0.3s ease-in-out;
             -webkit-transition: border-bottom 0.3s ease-in-out;
             -o-transition: border-bottom 0.3s ease-in-out;
         }
         a:hover {
             border-bottom-color: var(--color-accent);
+
             cursor: pointer;
         }
     }
@@ -100,4 +130,16 @@
 
 .side-wrapper.is-active {
     transform: translateX(0);
+}
+
+@media (max-width: 900px) {
+    .side-wrapper {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .side-wrapper {
+        width: 100vw;
+    }
 }

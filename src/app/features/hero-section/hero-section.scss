@@ -4,6 +4,8 @@
     min-height: 600px;
     height: 100svh;
 
+    padding-top: 80px;
+
     display: flex;
     align-items: center;
 
@@ -54,9 +56,9 @@
         min-height: 430px;
 
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 
-        //column-gap: clamp(4rem, 7vw, 8rem);
+        column-gap: clamp(4rem, 7vw, 8rem);
 
         align-items: center;
     }
@@ -121,7 +123,7 @@
     }
 
     .hero-flex > div:first-child h1 {
-        font-size: clamp(4rem, 6vw, 6.5rem);
+        font-size: clamp(3.5rem, 4.5vw, 6.5rem);
         font-weight: 400;
 
         line-height: 0.95;
@@ -314,7 +316,7 @@
 
 @media (max-width: 500px) {
     .hero-section {
-        width: 750px;
+        max-width: 750px;
 
         .hero-content {
             width: calc(100% - 2.5rem);
@@ -337,12 +339,6 @@
             grid-template-columns: 40px 1fr;
 
             column-gap: 1rem;
-        }
-
-        .designer-content img,
-        .developer-content img {
-            width: 32px;
-            height: 32px;
         }
 
         .designer-content h2,
