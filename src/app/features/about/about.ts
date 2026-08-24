@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './about.scss'
 })
 export class AboutComponent {
-  // logic here i guess
+  scrollTo(sectionId: string): void {
+    document.getElementById(sectionId)?.scrollIntoView({behavior: 'smooth'})
+  }
 }

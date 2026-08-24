@@ -1,10 +1,295 @@
 .about-wrapper {
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    gap: 1rem;
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: minmax(0,1fr) minmax(0, 1fr);
+    column-gap: clamp(5rem, 8vw, 9rem);
+
     margin: 50px auto;
     padding: 50px 2rem 0;
-    max-width: 800px;
+
+    min-height: 780px;
+    max-width: 1280px;
+
     font-size: 1.5rem;
+
+    .about-intro {
+        //border: 1px solid blue;
+
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+
+        padding-right: clamp(2rem, 4vw, 5rem);
+
+        width: 640px;
+
+        text-align: left;
+
+        .section-number {
+            font-family: 'Roboto Mono', monospace;
+
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+
+            color: #777;
+
+            margin-bottom: 2rem;
+        }
+
+        .title-wrapper {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+
+            margin-bottom: 4rem;
+        }
+
+        .title-wrapper h2 {
+            margin: 0;
+
+            font-family: 'Raleway', sans-serif;
+
+            font-size: clamp(4rem, 7vw, 6.5rem);
+            font-weight: 600;
+            line-height: 0.85;
+
+            letter-spacing: 0.12rem;
+            text-transform: uppercase;
+
+            color: rgba(255,255,255,0.055);
+        }
+
+        .title-wrapper span {
+            position: absolute;
+            bottom: -0.25rem;
+            left: 0.15rem;
+
+            font-family: 'Roboto Mono', monospace;
+
+            font-size: 0.8rem;
+
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+
+            color: var(--color-accent);
+        }
+
+        .title-accent {
+            width: 90px;
+            height: 1px;
+
+            margin: 2.5rem 0;
+
+            background: var(--color-accent);
+        }
+
+        .title-accent::after {
+            content: "";
+
+            display: block;
+
+            width: 5px;
+            height: 5px;
+
+            margin-left: auto;
+
+            transform: translateY(-2px);
+
+            border-radius: 50%;
+
+            background: var(--color-accent);
+        }
+
+        .description {
+            max-width: 540px;
+
+            margin: 0;
+
+            font-family: "Roboto Mono", monospace;
+
+            font-size: 0.95em;
+            line-height: 1.9;
+            letter-spacing: 0.04em;
+
+            color: rgba(255,255,255,0.65);
+        }
+
+        .experience-card {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+
+            margin-top: auto;
+            padding-top: 4rem;
+
+            .experience-value {
+                font-family: "Roboto Mono", monospace;
+
+                font-size: 2.5rem;
+                font-weight: 400;
+
+                color: #fff;
+            }
+
+            .experience-label {
+                font-family: "Roboto Mono", monospace;
+
+                font-size: 0.7rem;
+                letter-spacing: 0.2em;
+
+                text-transform: uppercase;
+
+                color: rgba(255,255,255, 0.45);
+            }
+        }
+    }
+
+    .about-intro > h1 {
+        max-width: 650px;
+
+        margin: 0;
+
+        font-family: 'Roboto Mono', monospace;
+
+        font-size: clamp(2rem, 3vw, 3.25rem);
+        font-weight: 400;
+
+        line-height: 1.25;
+        letter-spacing: 0.06em;
+
+        text-transform: uppercase;
+    }
+
+    .about-intro > h1 span {
+        display: block;
+
+        color: var(--color-accent);
+    }
+
+    .about-wrapper > div:last-child {
+        //border: 1px solid red;
+
+        display: flex;
+        flex-direction: column;
+
+        width: 640px;
+
+        text-align: left;
+
+        .about-mini-section {
+            display: flex;
+            flex-direction: row;
+
+            width: 100%;
+        }
+    }
+
+    .about-details {
+        position: relative;
+
+        display: flex; 
+        flex-direction: column;
+
+        padding-left: clamp(2rem, 4vw, 5rem);
+
+        .about-mini-section {
+            display: grid;
+            grid-template-columns: 110px minmax(0, 1fr);
+
+            gap: 2rem;
+
+            padding: 0 0 2.5rem;
+            margin-bottom: 2.5rem;
+
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+
+            .mini-icon {
+                font-family: "Roboto Mono", monospace;
+
+                font-size: 1.5rem;
+
+                color: var(--color-accent);
+
+            }
+        }
+
+        .about-mini-section > p {
+            margin: 0;
+
+            font-family: "Roboto Mono", monospace;
+
+            font-size: 0.85rem;
+            line-height: 1.9;
+            letter-spacing: 0.025rem;
+
+            color: rgba(255,255,255,0.65);
+        }
+
+        .about-cta {
+            align-self: flex-start;
+
+            margin-top: auto;
+            padding: 0.5rem 2.5rem;
+
+            border: 1px solid var(--color-accent);
+            border-radius: 999px;
+
+            background: transparent;
+
+            font-family: "Roboto Mono", monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+
+            color: var(--color-accent);
+
+            cursor: pointer;
+
+            transition:
+                background-color 180ms ease,
+                color 180ms ease,
+        }
+
+        .about-cta:hover {
+            background: var(--color-accent);
+            color: #fff;
+        }
+    }
+
+    .about-details::before {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        width: 1px;
+
+        background: rgba(255,255,255,0.2);
+    }
+
+    .about-details::after {
+        content: "";
+
+        position: absolute;
+
+        top: 50%;
+        left: -3px;
+
+        width: 7px;
+        height: 7px;
+
+        border-radius: 50%;
+
+        background: var(--color-accent);
+        box-shadow: 0 0 12px rgba(31,126,190,0.6);
+    }
 }
