@@ -9,6 +9,7 @@
     @each $key, $value in colors.$skills-palette {
         --#{$key}-color: #{$value};
     }
+    --header-height: 80px;
 }
 
 *,
@@ -54,6 +55,10 @@
 
 .-bold {
     font-weight: 700;
+}
+
+html {
+    scroll-padding-top: 100px;
 }
 
 body {
