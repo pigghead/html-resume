@@ -325,3 +325,119 @@
     background: var(--color-accent);
     box-shadow: 0 0 12px rgba(31, 126, 190, 0.6);
 }
+
+@media(max-width: 960px) {
+    .about-wrapper {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        margin: clamp(30px, 4vw, 80px) auto;
+        padding-top: clamp(30px, 4vw, 50px);
+    }
+
+    .about-wrapper::before,
+    .about-wrapper::after {
+        display: none;
+    }
+
+    .about-intro {
+        padding-right: 0;
+    }
+
+    .about-details {
+        padding-left: 0;
+        margin-top: 4rem;
+    }
+
+    .experience-card {
+        margin-top: 2.5rem;
+    }
+}
+
+@media(max-width: 600px) {
+    .about-wrapper {
+        margin: 25px auto;
+        padding: 30px 1.25rem 0;
+    }
+
+    .about-intro {
+
+        .section-number {
+            margin-bottom: 1rem;
+
+            font-size: 0.7rem;
+            line-height: 0.18em;
+        }
+
+        .title-wrapper {
+            margin-bottom: 1.5rem;
+        }
+
+        .title-wrapper h2 {
+            font-size: clamp(3rem, 14vw, 4rem);
+        }
+
+        .title-wrapper span {
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
+        }
+
+        .title-accent {
+            width: 70px;
+            margin: 1.25rem 0;
+        }
+
+        .description {
+            font-size: 0.8rem;
+            line-height: 1.8;
+        }
+
+        .experience-card {
+            margin-top: 2.5rem;
+            padding-top: 0;
+
+            .experience-value {
+                font-size: 1.75rem;
+            }
+
+            .experience-label {
+                font-size: 0.65rem;
+            }
+        }
+    }
+
+    .about-intro > h1 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        line-height: 1.35;
+        letter-spacing: 0.025em;
+    }
+
+    .about-details {
+        margin-top: 4rem;
+
+        .about-mini-section {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+
+            .mini-icon {
+                font-size: 1.1rem;
+            }
+        }
+
+        .about-mini-section > p {
+            font-size: 0.8rem;
+            line-height: 1.8;
+        }
+
+        .about-cta {
+            width: 100%;
+            max-width: 300px;
+
+            padding: 0.7 1.5rem;
+        }
+    }
+}
