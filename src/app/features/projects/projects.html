@@ -8,5 +8,9 @@
 <app-modal
     *ngIf="selectedProject"
     [project]="selectedProject"
-    (close)="closeModal()">
+    [projectIndex]="selectedProjectIndex"
+    [projectCount]="Projects.length"
+    (close)="closeModal()"
+    (previousProject)="previousProject()"
+    (nextProject)="nextProject()">
 </app-modal>

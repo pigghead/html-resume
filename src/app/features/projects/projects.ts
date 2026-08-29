@@ -39,13 +39,37 @@ export class ProjectsComponent implements OnInit {
     });
   }
 
-  openModal(project: any) {
+  openModal(project: any): void {
     this.selectedProject = project;
-    document.body.classList.add('modal-open');
+    //document.body.classList.add('modal-open');
   }
 
-  closeModal() {
+  closeModal(): void {
     this.selectedProject = null;
-    document.body.classList.remove('modal-open');
+    //document.body.classList.remove('modal-open');
+  }
+
+  previousProject(): void {
+    if(!this.selectedProject || !this.Projects.length) return;
+
+    const currentIndex = this.Projects.indexOf(this.selectedProject);
+
+    const previousIndex = (currentIndex - 1 + this.Projects.length) % this.Projects.length;
+
+    this.selectedProject = this.Projects[previousIndex];
+  }
+
+  nextProject(): void {
+    if(!this.selectedProject || !this.Projects.length) return;
+
+    const currentIndex = this.Projects.indexOf(this.selectedProject);
+
+    const nextIndex = (currentIndex + 1) % this.Projects.length;
+
+    this.selectedProject = this.Projects[nextIndex];
+  }
+
+  get selectedProjectIndex(): number {
+    return this.selectedProject ? this.Projects.indexOf(this.selectedProject) : 0;
   }
 }

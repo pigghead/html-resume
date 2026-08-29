@@ -1,21 +1,27 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-modal-carousel',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule],
   templateUrl: './modal-carousel.html',
   styleUrls: ['./modal-carousel.scss']
 })
 export class ModalCarousel {
-  faChevronCircleLeft = faChevronCircleLeft;
-  faChevronCircleRight = faChevronCircleRight;
+  faChevronCircleLeft = faChevronLeft;
+  faChevronCircleRight = faChevronRight;
   currentIndex: number = 0;
 
   @Input() modalImages: string[] = [];
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes['modalImages']) {
+      this.currentIndex = 0;
+    }
+  }
 
   getActiveSlide(index: number): string {
     return index === this.currentIndex ? 'active' : 'hidden'
