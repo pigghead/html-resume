@@ -9,6 +9,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 export class ProjectCardComponent {
   @Input() project!: any;
+  @Input() active: boolean = false;
   @Output() learnMore = new EventEmitter<any>();
 
   onLearnMore(): void {

@@ -20,40 +20,73 @@ export class Carousel {
 
   currentIndex: number = 0;
 
+  // infinite left scroll
   nextSlide(): void {
-    if (this.currentIndex < this.items.length - 1) {
-      this.currentIndex++;
-    }
-    //this.currentIndex = (this.currentIndex + 1) % this.items.length;
+    // edge case catch
+    if(!this.items.length) return;
+
+    // if (this.currentIndex < this.items.length - 1) {
+    //   this.currentIndex++;
+    // }
+    this.currentIndex = (this.currentIndex + 1) % this.items.length;
   }
 
+  // Infinite right scroll
   previousSlide(): void {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-    }
-    //this.currentIndex = (this.currentIndex - 1 + this.items.length) % this.items.length;  
+    // edge case catch
+    if(!this.items.length) return;
+
+    // if (this.currentIndex > 0) {
+    //   this.currentIndex--;
+    // }
+    this.currentIndex = (this.currentIndex - 1) % this.items.length;
   }
 
   getSlideClass(index: number): string {
-    if (index === this.currentIndex) return 'active';
+    //if (index === this.currentIndex) return 'active';
+    if (!this.items.length) return "hidden";
 
-    if (this.currentIndex > 0 && index === this.currentIndex - 1) return 'prev';
+    const length = this.items.length;
 
-    if (this.currentIndex > 0 && index === this.currentIndex - 2) return 'prev-2';
+    let offset = index - this.currentIndex;
 
-    if (this.currentIndex < this.items.length - 1 && index === this.currentIndex + 1) return 'next';
+    // if (this.currentIndex > 0 && index === this.currentIndex - 1) return 'prev';
 
-    if (this.currentIndex < this.items.length - 1 && index === this.currentIndex + 2) return 'next-2';
+    // if (this.currentIndex > 0 && index === this.currentIndex - 2) return 'prev-2';
 
-    if (index < this.currentIndex - 2) return 'hidden-left';
+    // if (this.currentIndex < this.items.length - 1 && index === this.currentIndex + 1) return 'next';
 
-    if (index > this.currentIndex + 1) return 'hidden-right';
+    // if (this.currentIndex < this.items.length - 1 && index === this.currentIndex + 2) return 'next-2';
 
-    return 'hidden';
+    // if (index < this.currentIndex - 2) return 'hidden-left';
+
+    // if (index > this.currentIndex + 1) return 'hidden-right';
+
+    if(offset > length/2) {
+      offset -= length;
+    }
+
+    if(offset < -length/2) {
+      offset += length;
+    }
+
+    switch(offset) {
+      case -2:
+        return 'prev-2'
+      case -1:
+        return 'prev';
+      case 0:
+        return 'active';
+      case 1:
+        return 'next';
+      case 2:
+        return 'next-2';
+      default:
+        return offset < 0 ? 'hidden-left' : 'hidden-right';
+    }
   }
 
   onLearnMore(project: Project) {
     this.learnMore.emit(project);
-    //console.log("propogating learnMore; item: ", project);
   }
 }

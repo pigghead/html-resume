@@ -19,7 +19,13 @@
             {"name": "Azure", "category": "backend-skills"},
             {"name": "Github Actions", "category": "tools-skills"}
         ],
-        "githubLink": "https://github.com/pigghead/html-resume"
+        "links": [
+            {
+                "type": "github",
+                "label":"Source code",
+                "url": "https://github.com/pigghead/html-resume"
+            }
+        ]
     },
     {
         "name": "Spray Bot",

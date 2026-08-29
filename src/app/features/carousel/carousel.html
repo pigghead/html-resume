@@ -1,5 +1,12 @@
 <div class="carousel">
-    <fa-icon [icon]="faChevronLeft" (click)="previousSlide()" class="nav" [class.disabled]="currentIndex === 0"></fa-icon>
+    <!-- <fa-icon [icon]="faChevronLeft" (click)="previousSlide()" class="nav" [class.disabled]="currentIndex === 0"></fa-icon> -->
+     <button 
+        class="nav nav--previous"
+        aria-label="previous project"
+        (click)="previousSlide()">
+
+        <fa-icon [icon]="faChevronLeft"></fa-icon>
+    </button>
 
     <div class="content">
         <div
@@ -10,8 +17,16 @@
                 [project]="item"
                 (learnMore)="onLearnMore($event)">
             </app-project-card>
+            <!-- [active]="i===currentIndex" -->
         </div>
     </div>
 
-    <fa-icon [icon]="faChevronRight" (click)="nextSlide()" class="nav" [class.disabled]="currentIndex === items.length - 1"></fa-icon>
+    <!-- <fa-icon [icon]="faChevronRight" (click)="nextSlide()" class="nav" [class.disabled]="currentIndex === items.length - 1"></fa-icon> -->
+    <button 
+        class="nav nav--next"
+        aria-label="next project"
+        (click)="nextSlide()">
+
+        <fa-icon [icon]="faChevronRight"></fa-icon>
+    </button>
 </div>

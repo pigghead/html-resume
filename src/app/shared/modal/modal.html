@@ -1,25 +1,73 @@
-<div class="modal-wrapper" (click)="onClose()">
-    <div class="modal-container" (click)="$event.stopPropagation()">
-        <div class="left-container">
-            <app-modal-carousel [modalImages]="project.modalImages"></app-modal-carousel>
-            <p>{{ project.date | date:'MMM. yyyy' }}</p>
-             <div class="skills">
-                <span 
-                class="modal-skill-chip roboto-mono-font" 
-                [ngClass]="skill.category"
-                *ngFor="let skill of project.skills">
-                    {{ skill.name }}
+<div 
+    class="modal-wrapper" 
+    (click)="onClose()">
+
+        <button 
+            class="modal-project-nav modal-project-nav--previous"
+            (click)="onPreviousProject(); $event.stopPropagation()">
+
+            <fa-icon [icon]="faChevronLeft"></fa-icon>
+        </button>
+
+    <article class="modal-container" (click)="$event.stopPropagation()">
+
+        <header class="modal-header">
+            <div>
+                <span class="eyebrow roboto-mono-font">
+                    {{ project.subtitle }}
                 </span>
-             </div>
-             <a class="link raleway-font" [href]="project.githubLink" [class.disable]="!project.githubLink">
-                <fa-icon [icon]="faGithub" size="xl"></fa-icon>
-             </a>
+                <h2 class="roboto-mono-font">
+                    {{ project.name }}
+                </h2>
+            </div>
+            <button class="close" (click)="onClose()">
+                <fa-icon [icon]="faXmark"></fa-icon>
+            </button>
+        </header>
+
+        <div class="modal-body">
+            <section class="visual-column">
+                <app-modal-carousel [modalImages]="project.modalImages"></app-modal-carousel>
+            </section>
+            <section class="information-column">
+                <div class="description">
+                    <p class="intro raleway-font">{{ project.description }}</p>
+                </div>
+                <div class="technologies">
+                    <span class="section-label roboto-mono-font">Technologies</span>
+                    <div class="skills">
+                        <span 
+                            class="modal-skill-chip roboto-mono-font"
+                            [ngClass]="skill.category"
+                            *ngFor="let skill of project.skills">
+                                {{ skill.name }}
+                        </span>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="right-container">
-            <h2 class="roboto-mono-font">{{ project.name }}</h2>
-            <p class="subtitle raleway-font">{{ project.subtitle }}</p>
-            <p class="raleway-font">{{ project.description }}</p>
-            <p class="raleway-font">{{ project.extendedDesc }}</p>
-        </div>
-    </div>
+
+        <footer class="modal-footer">
+            <span class="project-count roboto-mono-font">
+                {{ projectIndex + 1 | number:'2.0' }}
+                <span></span>
+                {{ projectCount | number:'2.0' }}
+            </span>
+            <div class="project-links">
+                <a 
+                    *ngFor="let link of project.links"
+                    [href]="link.url"
+                    target="_blank"
+                    class="project-link roboto-mono-font">{{link.label}}</a>
+            </div>
+        </footer>
+        
+    </article>
+
+    <button 
+        class="modal-project-nav modal-project-nav--next"
+        (click)="onNextProject(); $event.stopPropagation()">
+
+        <fa-icon [icon]="faChevronRight"></fa-icon>
+    </button>
 </div>
