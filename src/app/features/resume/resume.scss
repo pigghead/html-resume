@@ -1,104 +1,30 @@
 .resume-wrapper {
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 2rem auto;
-    max-width: 900px;
+    display: grid;
+    grid-template-columns: minmax(0, 0.6fr) 1fr;
 
-    h2 {
-        font-size: 1.25rem;
-        margin-bottom: 0.25rem;
-        text-transform: uppercase;
-    }
+    margin-top: calc(var(--header-height) + 20px);
 
-    .section {
-        margin-bottom: 2rem;
+    margin: 50px auto;
+    padding: 50px 2rem 0;
 
-        > div {
-            background-color: #2c2c2e;
-            padding: .75rem 1rem;
-            border-left: 4px solid var(--color-accent);
-            border-top-right-radius: 6px;
-            border-bottom-right-radius: 6px;
+    .left-rail {
+        display: flex;
+        flex-direction: column;
 
-            p {
-                margin: 0.5rem 0;
-            }
-        }
+        align-items: flex-start;
 
-        .job-entry {
-            margin-bottom: 1.5rem;
+        justify-content: flex-start;
 
-            .job-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: baseline;
-                margin-bottom: 0.25rem;
-            }
+        .section-label {
+            text-transform: uppercase;
 
-            .job-title {
-                font-style: italic;
-                margin: 0 0 0.5rem 0;
-            }
-
-            ul {
-                margin: 0;
-                padding-left: 1.2rem;
-
-                li {
-                    margin: 0.25rem 0;
-                }
-            }
-        }
-
-        .edu {
-            .uni {
-                display: flex;
-                justify-content: space-between;
-                align-items: baseline;
-                margin-bottom: 0.25rem;
-            }
-
-            .degree{
-                margin: 0;
-            }
-        }
-
-        .skill-topic {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1.5rem; 
-            font-weight: bold;
-
-            > span {
-                border-radius: 8px;
-                padding: 0.25rem 0.75rem;
-            }
+            font-size: 1.1rem;
+            font-weight: 600;
             
-            &.lang-skills > span { 
-                // background-color: var(--lang-skills-color); 
-                border: 2px solid var(--lang-skills-color);
-            }
-            &.frontend-skills > span { 
-                // background-color: var(--frontend-skills-color); 
-                border: 2px solid var(--frontend-skills-color);
-            }
-            &.backend-skills > span { 
-                // background-color: var(--backend-skills-color); 
-                border: 2px solid var(--backend-skills-color);
-            }
-            &.tools-skills > span { 
-                // background-color: var(--tools-skills-color); 
-                border: 2px solid var(--tools-skills-color);
-            }
-            &.other-skills > span { 
-                // background-color: var(--other-skills-color);
-                border: 2px solid var(--other-skills-color);
-            }
+            line-height: 1.8;
+            letter-spacing: 0.12rem;
+
+            color: rgba(31, 126, 190, 0.6);
         }
     }
 }
